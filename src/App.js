@@ -12,9 +12,11 @@ const App = () => {
   return (
     <>
     <NavBar/>
+    <div id = "main">
     <ItemListContainer saludo={"Bienvenido"} color = {redcolor}/>
     <ItemListContainer saludo={"A la tienda oficial de DioNeonLed"} color = {bluecolor}/>
     <Productos/>
+    </div>
     </>
   );
 }

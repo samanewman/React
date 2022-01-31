@@ -1,16 +1,18 @@
 .BotonContadorMenos, .BotonContadorMas{
     color: red;
     margin: 8px;
+    background-color: transparent;
 }
 
 .ContenedorContador{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: transparent;
 }
 
 #Contador{
     color: white;
-    background-color: transparent;
     margin: 8px;
+    background-color: transparent;
 }
