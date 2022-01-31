@@ -1,4 +1,4 @@
-.BotonContador{
+.BotonContadorMenos, .BotonContadorMas{
     color: red;
     margin: 8px;
 }

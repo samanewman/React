@@ -7,24 +7,22 @@ const ItemCount = () => {
   const [contador, ActualizarContador] = useState(1);
 
   const SubirCantidad = () => {
-    ActualizarContador(contador + 1);
-    document.getElementById("BotonMenos").disabled = false;
+      ActualizarContador(contador + 1);
+
   };
 
   const BajarCantidad = () => {
     if (contador>=1){
-    ActualizarContador(contador - 1);
-    } else{
-      document.getElementById("BotonMenos").disabled = true;
+      ActualizarContador(contador - 1);
     }
   };
 
   return <div>
 
       <div className="ContenedorContador">
-        <button className = "BotonContador" onClick={SubirCantidad}>+</button>
+        <button className = "BotonContadorMas" onClick={SubirCantidad}>+</button>
         <div id = "Contador">{contador}</div>
-        <button className = "BotonContador" onClick={BajarCantidad} id = "BotonMenos">-</button>
+        <button className = "BotonContadorMenos" onClick={BajarCantidad}>-</button>
       </div>
   </div>;
 }
