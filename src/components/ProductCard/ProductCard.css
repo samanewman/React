@@ -1,0 +1,16 @@
+.Imagen{
+    margin: 10px;
+}
+
+.Card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CardBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

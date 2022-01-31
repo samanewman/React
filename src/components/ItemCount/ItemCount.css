@@ -1,0 +1,16 @@
+.BotonContador{
+    color: red;
+    margin: 8px;
+}
+
+.ContenedorContador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Contador{
+    color: white;
+    background-color: transparent;
+    margin: 8px;
+}

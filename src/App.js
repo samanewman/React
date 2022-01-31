@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import './components/NavBar/NavBar.css';
+import NavBar from './components/NavBar/NavBar.js';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
+import Productos from './containers/Productos/Productos';
 
-function App() {
+let redcolor = "red";
+let bluecolor = "#E30CB8";
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar/>
+    <ItemListContainer saludo={"Bienvenido"} color = {redcolor}/>
+    <ItemListContainer saludo={"A la tienda oficial de DioNeonLed"} color = {bluecolor}/>
+    <Productos/>
+    </>
   );
 }
 
 export default App;
+

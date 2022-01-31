@@ -1,0 +1,42 @@
+.NavBar{
+    font-weight: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.UlNavBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.ItemNav{
+    justify-content: space-between;
+
+    margin: 30px;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 38, 0);
+}
+
+.ItemNav:hover{
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 38, 0);
+}
