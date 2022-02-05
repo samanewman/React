@@ -1,7 +1,19 @@
-.BotonContadorMenos, .BotonContadorMas{
+button{
     color: red;
     margin: 8px;
     background-color: transparent;
+}
+
+button:hover{
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(47, 0, 255),
+    0 0 82px rgb(0, 38, 255),
+    0 0 92px rgb(0, 89, 255),
+    0 0 102px rgb(0, 153, 255),
+    0 0 151px rgb(0, 204, 255);
 }
 
 .ContenedorContador{
