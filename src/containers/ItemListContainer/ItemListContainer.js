@@ -1,12 +1,15 @@
 import React from 'react';
 import './ItemListContainer.css';
-// import ProductCard from '../../components/ProductCard/ProductCard'
-// import FotoKirby from '../../imagenes/Imagenes-productos/Foto1.jpg'
-// import FotoBulbasaur from '../../imagenes/Imagenes-productos/Foto2.jpg'
-// import FotoCharmander from '../../imagenes/Imagenes-productos/Foto3.jpg'
 import ItemCount from '../../components/ItemCount/ItemCount';
 
+
 const ItemListContainer = (props) =>{
+
+  const Add = (counter) =>{
+    alert(`Se agregaron ${counter} productos.`);
+  };  
+  
+
   return(<div>
     <div className = "ContenedorSaludo">
       <ul>
@@ -16,14 +19,18 @@ const ItemListContainer = (props) =>{
 
     <div className = "ContenedorProductos">
 
+
     <ItemCount
         stock = "5"
-        initial = "1" />
-  </div> 
-</div>
+        initial = "1" 
+        Add = {Add}     
+        />
+
+    </div> 
+  </div>
 
     
   )
-}
+};
 
 export default ItemListContainer;
