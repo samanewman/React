@@ -4,7 +4,7 @@ import '../ItemList/ItemList.css';
 
 const ItemList = ({Items}) => {
 
-   return ( <div>
+   return ( <div className = "ItemListBox">
      {
       Items.map((item) => (
         <Item
