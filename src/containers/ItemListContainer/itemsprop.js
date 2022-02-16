@@ -28,3 +28,5 @@ const itemsjson = [
        initial:"1"
    }
 ]
+
+export default itemsjson;
