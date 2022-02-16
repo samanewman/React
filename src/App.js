@@ -9,10 +9,14 @@ let redcolor = "red";
 const App = () => {
   return (
     <>
-    <NavBar/>
-    <div id = "main">
-    <ItemListContainer saludo={"Bienvenido A la tienda oficial de DioNeonLed"} color = {redcolor}/>
-    </div>
+      <NavBar/>
+      <div id = "main">
+        <ItemListContainer 
+          saludo={"Bienvenido A la tienda oficial de DioNeonLed"} 
+          color = {redcolor}
+          />
+          
+      </div>
     </>
   );
 }

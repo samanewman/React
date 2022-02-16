@@ -1,0 +1,9 @@
+.ItemListBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Item{
+    margin: 25px;
+}

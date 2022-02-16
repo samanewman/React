@@ -1,36 +1,44 @@
-import React from 'react';
+import React, {useState, useEffect}from 'react';
 import './ItemListContainer.css';
-import ItemCount from '../../components/ItemCount/ItemCount';
+import ItemList from '../../components/ItemList/ItemList';
+import itemsjson from './itemsprop';
 
 
 const ItemListContainer = (props) =>{
 
-  const Add = (counter) =>{
-    alert(`Se agregaron ${counter} productos.`);
-  };  
-  
+  const [ArrItems, setItems] = useState([]);
 
-  return(<div>
-    <div className = "ContenedorSaludo">
-      <ul>
-        <li className = "ListaSaludo" style= {{color:`${props.color}`}}>{props.saludo}</li>
-      </ul>
+  useEffect(() => {
+    const ItemsPromise =  new Promise ((resolve, reject) => {
+      setTimeout(() => {
+        resolve(itemsjson)
+      }, 3000)
+    })
+    ItemsPromise 
+    .then((res) => {setItems(res);
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+  },[]);
+
+  return (
+
+    <div className = "main">
+      <div className = "ContenedorSaludo">
+        <ul>
+          <li className = "ListaSaludo" style= {{color:`${props.color}`}}>{props.saludo}</li>
+        </ul>
+      </div>
+
+      <div className = "ContenedorProductos">
+        <ItemList
+        Items={ArrItems}/>
+      </div> 
     </div>
+  ) 
 
-    <div className = "ContenedorProductos">
-
-
-    <ItemCount
-        stock = "5"
-        initial = "1" 
-        Add = {Add}     
-        />
-
-    </div> 
-  </div>
-
-    
-  )
 };
 
 export default ItemListContainer;
