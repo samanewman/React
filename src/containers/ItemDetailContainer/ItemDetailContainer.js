@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import itemsprop from '../ItemListContainer/itemsprop'
+import itemsprop from '../../public/itemprop'
+
 
 const ItemDetailContainer = () => {
     const item = itemsprop[0];
