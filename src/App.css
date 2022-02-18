@@ -1,6 +1,9 @@
 #main{
-  background-color: #000000;
-  color: white;
+  background: #091416;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   
 }
 .App {
@@ -42,3 +45,15 @@
   }
 }
 
+.Letras{
+  color: Deeppink
+  
+}
+
+.BoxItemDetail{
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

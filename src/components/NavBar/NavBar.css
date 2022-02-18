@@ -1,6 +1,6 @@
 .NavBar{
     font-weight: 100px;
-    background-color: black;
+    background: #091416;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,10 +11,13 @@
     flex-direction: row;
     align-items: center;
 }
-  
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
 .ItemNav{
     justify-content: space-between;
-
     margin: 30px;
     color: rgb(255, 255, 255);
     list-style: none;

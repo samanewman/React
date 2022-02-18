@@ -1,0 +1,57 @@
+.itemPhoto{
+    width: 400px;
+    height: 400px;
+}
+
+.itemPhoto:hover{
+scale: 50px 50px;
+}
+
+.ULista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.Li{
+    margin: 4px;
+}
+
+label{
+    font-size: larger;
+}
+label:hover{
+    color: aqua;
+}
+
+.BoxListas{
+    width: 200px;
+    margin-top: 10px;
+
+}
+
+.BoxDetails{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BoxAllDetails{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BoxBotonDetalle{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BotonDetalle{
+    align-self: center;
+}

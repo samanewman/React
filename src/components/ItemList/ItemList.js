@@ -2,17 +2,17 @@ import React from 'react';
 import Item from '../../components/Item/Item';
 import '../ItemList/ItemList.css';
 
-const ItemList = ({Items}) => {
+const ItemList = ({items}) => {
 
    return ( <div className = "ItemListBox">
      {
-      Items.map((item) => (
-        <Item
-        key = {item.ItemId}
-       item = {item}
-        />
-      ))
-    }
+      items.map((item) => (
+      <Item
+      key = {item.ItemId}
+      items = {item}
+    />
+     ))
+}
     
    </div>     
       

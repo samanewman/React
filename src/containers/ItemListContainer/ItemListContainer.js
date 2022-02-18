@@ -6,15 +6,15 @@ import itemsjson from './itemsprop';
 
 const ItemListContainer = (props) =>{
 
-  const [ArrItems, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const ItemsPromise =  new Promise ((resolve, reject) => {
+    const itemsPromise =  new Promise ((resolve, reject) => {
       setTimeout(() => {
         resolve(itemsjson)
       }, 3000)
     })
-    ItemsPromise 
+    itemsPromise 
     .then((res) => {setItems(res);
     })
     .catch((error) => {
@@ -34,7 +34,7 @@ const ItemListContainer = (props) =>{
 
       <div className = "ContenedorProductos">
         <ItemList
-        Items={ArrItems}/>
+        items={items}/>
       </div> 
     </div>
   ) 

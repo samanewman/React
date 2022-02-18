@@ -8,11 +8,13 @@
     align-items: center;
 }
 
-.box{
-    margin: 40px;
-}
-
 .img{
     height: 200px;
     width: 200px;
 }
+
+.title{
+    font-weight: bold;
+    color: rgb(165, 255, 20);
+}
+
