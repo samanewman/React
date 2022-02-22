@@ -12,7 +12,7 @@ const ItemListContainer = (props) =>{
     const itemsPromise =  new Promise ((resolve, reject) => {
       setTimeout(() => {
         resolve(itemsjson)
-      }, 3000)
+      }, 2000)
     })
     itemsPromise 
     .then((res) => {setItems(res);
@@ -25,7 +25,7 @@ const ItemListContainer = (props) =>{
 
   return (
 
-    <div className = "main">
+    <div className = "mainItemListContainer">
       <div className = "ContenedorSaludo">
         <ul>
           <li className = "ListaSaludo" style= {{color:`${props.color}`}}>{props.saludo}</li>

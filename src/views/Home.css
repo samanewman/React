@@ -1,0 +1,16 @@
+.Home, .DescripcionHome{
+    color: deeppink;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.DescripcionHome{
+    font-size: small;
+}
+
+.ImagenHome{
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}

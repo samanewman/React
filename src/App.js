@@ -1,31 +1,26 @@
 import './App.css';
 import './components/NavBar/NavBar.css';
 import NavBar from './components/NavBar/NavBar.js';
-import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer'
-
-let redcolor = "deeppink";
-
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Home from './views/Home';
+import Contacto from './views/Contacto';
+import Productos from './views/Productos';
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {
   return (
-    <>
-      <NavBar/>
-      <div id = "main">
-        <div className = "BoxItemDetail">
-          <p className = "Letras">Selecciona para ver los detalles:</p>
-          <ItemDetailContainer/>
-      </div>
-        <ItemListContainer 
-          saludo={"Bienvenido a la tienda oficial de DioNeon Led"} 
-          color = {redcolor}
-          />
-        
-      </div>
-      
-      
-    </>
-  )
+   <Router>
+        <>
+          <NavBar/>
+        </>
+        <Routes>
+          <Route path = "/Home" element={<Home />} />
+          <Route path = "/Productos" element={<Productos />} />
+          <Route path = "/Contacto" element={<Contacto />} />
+          <Route path = "/DetalleDeProducto" element={<ItemDetailContainer />} />
+       </Routes>
+    </Router>
+  );
 };
 
 export default App;

@@ -36,7 +36,7 @@ const itemsjson = [
     {
          itemId:"4",
          pictureUrl:"https://ae01.alicdn.com/kf/Hf0b10ee1f6c84a51a74513aed37dcec1i/Letrero-de-ne-n-Led-de-Sailor-Moon-decoraci-n-acr-lica-personalizada-para-tienda-fiesta.jpg_Q90.jpg_.webp",
-         itemName:"Sailor Mooon",
+         itemName:"Sailor Moon",
          itemDescription:"Cartel de luces de neón led de alta eficiencia",
          itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
          itemPrice:"$10.000",
@@ -65,7 +65,29 @@ const itemsjson = [
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
          stock:"6",
          initial:"1"
-     }
+     },
+     {
+        itemId:"7",
+        pictureUrl:"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRMQH7yviE4_E-Ux_-hP_s_4LujZKHcdlB7qyMZR7PMhch-PmTv",
+        itemName:"Zero Two",
+        itemDescription: "Cartel de luces de neón led de alta eficiencia",
+        itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+        itemPrice:"$12.000",
+        itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+        stock:"9",
+        initial:"1"
+    },
+    {
+       itemId:"8",
+       pictureUrl:"https://http2.mlstatic.com/D_NQ_NP_886895-MLM48814854654_012022-O.webp",
+       itemName:"Akatsuki",
+       itemDescription: "Cartel de luces de neón led de alta eficiencia",
+       itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+       itemPrice:"$12.000",
+       itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+       stock:"9",
+       initial:"1"
+   }
  ]
  
  export default itemsjson;

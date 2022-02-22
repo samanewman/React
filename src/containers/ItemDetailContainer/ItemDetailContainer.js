@@ -1,9 +1,11 @@
-import React, {useEffect, useState } from 'react'
-import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import itemsprop from '../../public/itemprop'
+import React, {useEffect, useState } from 'react';
+import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import itemsprop from '../../public/itemprop';
+import './ItemDetailContainer.css';
 
 
 const ItemDetailContainer = () => {
+
     const item = itemsprop[0];
 
     const [itemsd, setItemsd] = useState([]);
@@ -21,7 +23,7 @@ const ItemDetailContainer = () => {
         console.log(error)
       })
   
-    },[]);
+    });
 
   return (
     <div className = "MainItemDetail">

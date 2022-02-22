@@ -1,7 +1,7 @@
-.main{
+.ContenedorProductos{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .ListaSaludo{
@@ -13,11 +13,4 @@
 
 .ContenedorSaludo{
 margin-bottom: 20px;
-}
-
-.ContenedorProductos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }

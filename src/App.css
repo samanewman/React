@@ -1,11 +1,3 @@
-#main{
-  background: #091416;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
 .App {
   text-align: center;
 }
@@ -43,17 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.Letras{
-  color: Deeppink
-  
-}
-
-.BoxItemDetail{
-  margin: 10px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
