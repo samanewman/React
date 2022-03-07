@@ -1,7 +1,7 @@
 const itemsjson = [
 
     {
-       itemId:"1",
+       itemId:"0",
        pictureUrl:"https://cdn.shopify.com/s/files/1/0396/9643/3315/products/55_6db3015e-f1d7-47d9-a72d-813b55281d0b_1024x.jpg?v=1594585498",
        itemName:"Kirby",
        itemDescription:"Cartel Kirby neón led de alta eficiencia. Se puede solicitar en otros colores y distintos tamaños. Utiliza 12v se conecta a 220.",
@@ -9,10 +9,11 @@ const itemsjson = [
        itemPrice:"$8.000",
        itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
        stock:"10",
-       initial:"1"
+       initial:"1",
+       categoria: "pokemon"
     },
     {
-        itemId:"2",
+        itemId:"1",
         pictureUrl:"https://cdn.shopify.com/s/files/1/0375/5209/5367/products/0_2090d952-794a-4291-9c94-f78ef24891be_800x.jpg?v=1617101132",
         itemName:"Bulbasaur",
         itemDescription: "Cartel Bulbasaur de neón led de alta eficiencia",
@@ -20,10 +21,11 @@ const itemsjson = [
         itemPrice:"$10.000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
         stock:"5",
-        initial:"1"
+        initial:"1",
+        categoria: "pokemon"
     },
     {
-        itemId:"3",
+        itemId:"2",
         pictureUrl:"https://cdn.shopify.com/s/files/1/0375/5209/5367/products/WhatsAppImage2021-03-19at11.07.19AM_1024x.jpg?v=1624874225",
         itemName:"Charmander",
         itemDescription:"Cartel de luces de neón led de alta eficiencia",
@@ -31,10 +33,11 @@ const itemsjson = [
         itemPrice:"$12.000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
         stock:"4",
-        initial:"1"
+        initial:"1",
+        categoria: "pokemon"
     },
     {
-         itemId:"4",
+         itemId:"3",
          pictureUrl:"https://ae01.alicdn.com/kf/Hf0b10ee1f6c84a51a74513aed37dcec1i/Letrero-de-ne-n-Led-de-Sailor-Moon-decoraci-n-acr-lica-personalizada-para-tienda-fiesta.jpg_Q90.jpg_.webp",
          itemName:"Sailor Moon",
          itemDescription:"Cartel de luces de neón led de alta eficiencia",
@@ -42,10 +45,11 @@ const itemsjson = [
          itemPrice:"$10.000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
          stock:"6",
-         initial:"1"
+         initial:"1",
+         categoria: "sailor-moon"
      },
      {
-         itemId:"5",
+         itemId:"4",
          pictureUrl:"https://i.etsystatic.com/24877719/r/il/1a4dd5/3652491577/il_300x300.3652491577_50nz.jpg",
          itemName:"Luna",
          itemDescription: "Cartel de luces de neón led de alta eficiencia",
@@ -53,10 +57,11 @@ const itemsjson = [
          itemPrice:"$9.000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
          stock:"6",
-         initial:"1"
+         initial:"1",
+         categoria: "sailor-moon"
      },
      {
-         itemId:"6",
+         itemId:"5",
          pictureUrl:"https://i.etsystatic.com/25071783/r/il/85d8fa/3559014309/il_570xN.3559014309_t63r.jpg",
          itemName:"Pikachu",
          itemDescription: "Cartel de luces de neón led de alta eficiencia",
@@ -64,10 +69,11 @@ const itemsjson = [
          itemPrice:"$15.000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
          stock:"6",
-         initial:"1"
+         initial:"1",
+         categoria: "pokemon"
      },
      {
-        itemId:"7",
+        itemId:"6",
         pictureUrl:"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRMQH7yviE4_E-Ux_-hP_s_4LujZKHcdlB7qyMZR7PMhch-PmTv",
         itemName:"Zero Two",
         itemDescription: "Cartel de luces de neón led de alta eficiencia",
@@ -75,10 +81,11 @@ const itemsjson = [
         itemPrice:"$12.000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
         stock:"9",
-        initial:"1"
+        initial:"1",
+        categoria: "darling-in-the-franxx"
     },
     {
-       itemId:"8",
+       itemId:"7",
        pictureUrl:"https://http2.mlstatic.com/D_NQ_NP_886895-MLM48814854654_012022-O.webp",
        itemName:"Akatsuki",
        itemDescription: "Cartel de luces de neón led de alta eficiencia",
@@ -86,7 +93,8 @@ const itemsjson = [
        itemPrice:"$12.000",
        itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
        stock:"9",
-       initial:"1"
+       initial:"1",
+       categoria: "naruto"
    }
  ]
  

@@ -12,7 +12,7 @@ const ItemListContainer = (props) =>{
     const itemsPromise =  new Promise ((resolve, reject) => {
       setTimeout(() => {
         resolve(itemsjson)
-      }, 2000)
+      }, 500)
     })
     itemsPromise 
     .then((res) => {setItems(res);

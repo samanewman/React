@@ -12,17 +12,22 @@ return(
             <Item 
             items = {itemd} />
         </div>
+        <div className = "BoxBotonDetalle">
+                <button className = "BotonDetalle" onClick={() => {setShow(!show);}}>{show ? 'Ver mas detalles':'Ocultar detalles'}</button>
+        </div>
+        
         {show ?(<div></div>):(
             <div className = "BoxDetails">
                 <div>
-                            <div className = "BoxListas">{itemd.itemDescription}</div>
+                <div className = "BoxListas">{itemd.itemDescription}</div>
                             <div>Precio: {itemd.itemPrice}</div>
                             <div className = "BoxListas">
                                 <div>Tamaños:</div>
                                 <ul className = "ULista">
                                     <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[0]}</label></li>
                                     <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[1]}</label></li>
-                                    <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[2]}</label></li>                            <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[3]}</label></li>
+                                    <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[2]}</label></li>                            
+                                    <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[3]}</label></li>
                                     <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[4]}</label></li>
                                 </ul>
                             </div>
@@ -50,9 +55,7 @@ return(
                             </div> 
                 </div>
             </div>)}
-        <div className = "BoxBotonDetalle">
-                <button className = "BotonDetalle" onClick={() => {setShow(!show);}}>{show ? 'Ver mas detalles':'Ocultar detalles'}</button>
-        </div>
+
     </div>
     
 )

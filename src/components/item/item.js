@@ -14,7 +14,7 @@ const Item = ({items}) => {
     return (
       <div className = "box">
         <div className = "ItemBox">
-            <Link to="/DetalleDeProducto"><img className = "img"src = {items.pictureUrl} alt = {items.ItemName} /></Link>
+            <Link to={`/DetalleDeProducto/${items.itemId}`}><img className = "img"src = {items.pictureUrl} alt = {items.ItemName} /></Link>
             <div className = "title">{items.itemName}</div>
             <ItemCount stock = "5" initial = "1" add = {add}/>
         </div>
