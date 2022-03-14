@@ -1,22 +1,17 @@
 import React from 'react';
-import ItemCount from '../../components/ItemCount/ItemCount';
+
 import '../Item/Item.css';
 import {Link} from "react-router-dom";
 
 const Item = ({items}) => {
-
-  const add = (counter) =>{
-    if (counter > 0){
-      alert(`Se agregaron ${counter} productos.`);
-    }
-  };  
 
     return (
       <div className = "box">
         <div className = "ItemBox">
             <Link to={`/DetalleDeProducto/${items.itemId}`}><img className = "img"src = {items.pictureUrl} alt = {items.ItemName} /></Link>
             <div className = "title">{items.itemName}</div>
-            <ItemCount stock = "5" initial = "1" add = {add}/>
+            <div className = "precio">{items.itemPrice}</div>
+            
         </div>
     </div>
   )

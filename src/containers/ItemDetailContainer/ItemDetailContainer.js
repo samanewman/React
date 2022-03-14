@@ -7,17 +7,14 @@ import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
-  let id = useParams();
-  console.log(id.id);
+    let id = useParams();
 
-    const item = itemsprop[id.id];
-
-    const [itemsd, setItemsd] = useState([]);
+    const [itemsd, setItemsd] = useState(itemsprop[id.id]);
 
     useEffect(() => {
       const getItem =  new Promise ((resolve, reject) => {
         setTimeout(() => {
-          resolve(item)
+          resolve(itemsd)
         }, 500)
       })
       getItem

@@ -1,11 +1,11 @@
 import React, {useState, useEffect}from 'react';
 import './ItemListContainer.css';
 import ItemList from '../../components/ItemList/ItemList';
-import itemsjson from '../../public/itemprop'
+import itemsjson from '../../public/itemprop';
 
 
 const ItemListContainer = (props) =>{
-
+   
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const ItemListContainer = (props) =>{
     })
     itemsPromise 
     .then((res) => {setItems(res);
+      
     })
     .catch((error) => {
       console.log(error)

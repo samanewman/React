@@ -1,11 +1,12 @@
 import React from 'react';
 import './ItemCount.css';
 import { useState } from 'react';
-
+import {Link} from "react-router-dom";
 
 const ItemCount = (props) => {
 
   const[counter, setCounter] = useState(props.initial);
+  const [show, setShow] = useState (true);
 
   const SubirCantidad = () => {
     
@@ -25,15 +26,32 @@ const ItemCount = (props) => {
     }
   };
 
-  return <div>
-      <div className="ContenedorContador">
-        <button id= "BotonContadorMas" onClick={SubirCantidad}>+</button>
-        <div id = "Contador">{counter}</div>
-        <button id = "BotonContadorMenos" onClick={BajarCantidad}>-</button>
+  return (
+    
+  <div className = "ContenedorItemCount">
+
+    {show ? (
+      <div>
+        <div className="ContenedorContador">
+          <button id= "BotonContadorMas" onClick={SubirCantidad}>+</button>
+          <div id = "Contador">{counter}</div>
+          <button id = "BotonContadorMenos" onClick={BajarCantidad}>-</button>
+        </div>
+        
+        <button id = "BotonAgregar" 
+          onClick = {() =>{
+            setShow(!show);
+            props.add(counter);
+          }}
+          >Agregar al carrito
+        </button>
       </div>
-      <button id = "BotonAgregar" onClick = {() =>props.add(counter)} >Agregar al carrito</button>
+      ):(
+      <button><Link  to="/carrito">Ir al carrito</Link></button>
+      )}
       
   </div>
+  )
 }
 
 

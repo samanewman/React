@@ -12,10 +12,10 @@ const NavBar = () => {
                 <li><Link className = "ItemNav" to="/">Productos</Link></li>
                 <li className = "ItemNav" id="MenuCategoria">Categorías
                     <ul className = "SubmenuCategoria">
-                        <li><Link className = "ItemNav" to="Categorias/Pokemon">Pokémon</Link></li>
-                        <li><Link className = "ItemNav" to="Categorias/Sailor-Moon">Sailor Moon</Link></li>
-                        <li><Link className = "ItemNav" to="Categorias/Naruto">Naruto</Link></li>
-                        <li><Link className = "ItemNav" to="Categorias/Darling-in-the-franxx">Darling in the Franxx</Link></li>
+                        <li><Link className = "ItemNav" to="/categoria/pokemon">Pokémon</Link></li>
+                        <li><Link className = "ItemNav" to="/categoria/sailor-moon">Sailor Moon</Link></li>
+                        <li><Link className = "ItemNav" to="/categoria/naruto">Naruto</Link></li>
+                        <li><Link className = "ItemNav" to="/categoria/darling-in-the-franxx">Darling in the Franxx</Link></li>
                     </ul>
                 </li>
                 <li> <Link className = "ItemNav" to="/Contacto">Contacto</Link></li>
