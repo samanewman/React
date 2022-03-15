@@ -1,15 +1,23 @@
 import Item from '../Item/Item';
 import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
+import {useContext} from 'react';
+import {CartContext} from '../CartContext/CartContext'
 
 const ItemDetail = ({itemd}) => {
 
+    const[items, setItems] = useContext(CartContext);
 
     const add = (counter) =>{
+        
         if (counter > 0){
-            alert(`Se agregaron ${counter} productos.`);          
+            setItems([itemd, counter])
+            alert(`Se agregaron ${counter} productos.`); 
         }
+
       };  
+
+
 
 return(
     
@@ -23,7 +31,7 @@ return(
                 <ItemCount 
                     stock = {`${itemd.stock}`}
                     initial = {`${itemd.initial}`}
-                    add = {add} /> 
+                    add = {add}/> 
 
         </div>
 
