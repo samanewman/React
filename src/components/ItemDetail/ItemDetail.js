@@ -4,20 +4,25 @@ import ItemCount from '../../components/ItemCount/ItemCount';
 import {useContext} from 'react';
 import {CartContext} from '../CartContext/CartContext'
 
+
 const ItemDetail = ({itemd}) => {
 
-    const[items, setItems] = useContext(CartContext);
 
-    const add = (counter) =>{
-        
+    const addItem = useContext(CartContext);
+
+    const add = (counter) =>{   
         if (counter > 0){
-            setItems([itemd, counter])
-            alert(`Se agregaron ${counter} productos.`); 
+
+            let newItem = { 
+                id: parseInt(itemd.itemId),
+                nombre : itemd.itemName, 
+                cantidad : parseInt(counter)
+            }
+
+            addItem(newItem);
+            alert(`Tu producto  ${newItem.nombre} se agregó  al carrito.`); 
         }
-
       };  
-
-
 
 return(
     
@@ -62,13 +67,13 @@ return(
                             </ul>
                         </div>  
                         <div>
-                            <p>Tenemos cotización sin cargo para todas las formas y colores. Hacemos Factura A y B.</p>
+                            <div>Tenemos cotización sin cargo para todas las formas y colores. Hacemos Factura A y B.</div>
                             <div>✅Toda la cartelería está confeccionada en Neon LED de alta eficiencia.</div>
                             <div>🔌 Utiliza tensión 12v. Incluye fuente de alimentación para conectar a 220v.</div> 
-                            <p>Aceptamos 💵 Efectivo, 💳 MercadoPago o ↪️ Transferencia</p>
-                            <p>📐Realizamos diseños personalizados.
+                            <div>Aceptamos 💵 Efectivo, 💳 MercadoPago o ↪️ Transferencia</div>
+                            <div>📐Realizamos diseños personalizados.
                                 <div>🚚Hacemos Envíos a todo el país.</div>
-                            </p>
+                            </div>
                         </div> 
             </div>
           </div>
