@@ -1,3 +1,5 @@
+//Navbar con las opciones navegablesy los links del ruteo
+
 import '../CartWidget/CartWidget.css';
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';

@@ -1,3 +1,5 @@
+//Icono del carrito de compras que se visualiza en el nav.
+
 import React from 'react';
 import img from '../../imagenes/Carrito.png';
 import './CartWidget.css';

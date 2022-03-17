@@ -1,3 +1,5 @@
+//Esta es la vista de detalles del producto, se accede desde la foto del producto en el ItemList.
+
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
@@ -7,8 +9,10 @@ import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
+    //Se utiliza el ID del producto, extrayendo el parámetro con useParams
     let id = useParams();
 
+    //Se utiliza una promise para mostrar y actualizar el estado del item.
     const [itemsd, setItemsd] = useState(itemsprop[id.id]);
 
     useEffect(() => {
@@ -27,6 +31,8 @@ const ItemDetailContainer = () => {
     });
 
   return (
+
+    //Los detalles del item se encuentran en ItemDetail
     <div className = "MainItemDetail">
         <ItemDetail
         itemd = {itemsd}/>

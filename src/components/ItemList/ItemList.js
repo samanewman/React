@@ -1,3 +1,5 @@
+//Mapeo de items
+
 import React from 'react';
 import Item from '../../components/Item/Item';
 import '../ItemList/ItemList.css';

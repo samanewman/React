@@ -1,3 +1,7 @@
+//Vista del carrito de compras. Se accede desde el botón de "Ir al carrito" luego de darle comprar
+//o también desde el item del carrito en el nav.
+//Contiene un mapeo del array carrito que contiene los productos que se añaden al carrito.
+
 import React from 'react';
 import './carrito.css';
 import {useContext} from 'react';
@@ -6,8 +10,11 @@ import {CartContext} from '../CartContext/CartContext'
 
 const Carrito = () => {
 
+  //Se usa el carrito que se encuentra en el context y la función de eliminar item del carrito.
   const {carrito} = useContext(CartContext);
   const {removeItem} = useContext(CartContext);
+
+  //map del carrito y vista de la información del mismo.
 
     return (
     <div>

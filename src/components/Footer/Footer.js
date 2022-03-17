@@ -1,3 +1,5 @@
+//Pie de página (Footer)
+
 import React from 'react'
 import './Footer.css'
 import logowhatsapp from '../../imagenes/logo-whatsapp.png'

@@ -1,5 +1,6 @@
-import React from 'react';
+//Aquí se muestran los detalles del item. Foto, nombre y precio.
 
+import React from 'react';
 import '../Item/Item.css';
 import {Link} from "react-router-dom";
 

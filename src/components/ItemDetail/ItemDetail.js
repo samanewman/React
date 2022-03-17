@@ -1,3 +1,5 @@
+//Detalles del item, acá el llamado a la función para añadir un producto al carrito.
+
 import Item from '../Item/Item';
 import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
@@ -7,12 +9,14 @@ import {CartContext} from '../CartContext/CartContext'
 
 const ItemDetail = ({itemd}) => {
 
-
+    //Se trae la función de añadir al carrito del contexto
     const {addItem} = useContext(CartContext);
 
+    //State de color y de tamaño (size) para guardar el value del radio button seleccionado por el usuario.
     const [size, setSize] = useState(itemd.itemSize[0]);
     const [color, setColor] = useState(itemd.itemColors[0]);
 
+    //Expresión funcional para radio button
     const cambiarSize = (event) => {
             setSize(event.target.value)
       }
@@ -21,6 +25,7 @@ const ItemDetail = ({itemd}) => {
         setColor(event.target.value)
   }
 
+    //Exp. funcional para añadit producto al carrito. Datos del producto + llamado a la función del context
     const add = (counter) =>{   
         if (counter > 0){
                 let newItem = { 
