@@ -18,7 +18,7 @@ export const ItemsProvider = ({children}) =>{
 
         if(newitemcarrito){
             newitemcarrito.cantidad = newitemcarrito.cantidad + newItem.cantidad;
-            newitemcarrito.precio = newitemcarrito.precio + newItem.precio;
+            newitemcarrito.precio = newItem.precio * newitemcarrito.cantidad ;
         }else{
             carrito.push(newItem); 
         }

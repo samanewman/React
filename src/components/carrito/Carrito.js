@@ -7,39 +7,45 @@ import {CartContext} from '../CartContext/CartContext'
 const Carrito = () => {
 
   const {carrito} = useContext(CartContext);
+  const {removeItem} = useContext(CartContext);
 
-  return (
+    return (
     <div>
       <h1>TU CARRITO</h1>
 
       <div className = "ContainerCarrito">
+          <hr></hr>
         {
-        carrito.map( (carrito) => (
-
+        carrito.map( (itemcarrito) => (
+          
           <div className = "ContainerDetallesCarrito">
-            
-            <img className = "img"src = {carrito.foto} alt = {carrito.nombre} />
+
+            <img className = "img"src = {itemcarrito.foto} alt = {itemcarrito.nombre} />
             <div>
               <div>Nombre:</div> 
-                <div>{carrito.nombre}</div>
+                <div>{itemcarrito.nombre}</div>
               </div>
             <div>
               <div>Cantidad:</div>
-              <div>{carrito.cantidad}</div>
+              <div>{itemcarrito.cantidad}</div>
             </div>
             <div>
               <div>Tamaño:</div>
-              <div>{carrito.size}</div>
+              <div>{itemcarrito.size}</div>
             </div>
             <div>
               <div>Color:</div> 
-              <div style={{color: `${carrito.color}`}}>■</div>
+              <div style={{color: `${itemcarrito.color}`}}>■</div>
             </div>
             <div>
               <div>Precio:</div> 
-              <div>{carrito.precio}</div>
+              <div>{itemcarrito.precio}</div>
             </div>
-            <button /*onClick = {}*/>Borrar</button>
+            <button onClick = {() =>{
+
+              removeItem(itemcarrito);
+
+            }}>Borrar</button>
           </div>
         ))
         }
