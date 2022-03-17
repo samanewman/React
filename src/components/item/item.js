@@ -10,7 +10,7 @@ const Item = ({items}) => {
         <div className = "ItemBox">
             <Link to={`/DetalleDeProducto/${items.itemId}`}><img className = "img"src = {items.pictureUrl} alt = {items.ItemName} /></Link>
             <div className = "title">{items.itemName}</div>
-            <div className = "precio">{items.itemPrice}</div>
+            <div className = "precio">${items.itemPrice}</div>
             
         </div>
     </div>

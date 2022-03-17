@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useParams} from 'react-router';
 import ItemList from '../ItemList/ItemList';
 import itemsjson from '../../public/itemprop';
+import {useState, useEffect} from 'react';
+
 
 
 const Categorias = () => {

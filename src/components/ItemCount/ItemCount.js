@@ -41,13 +41,13 @@ const ItemCount = (props) => {
         <button id = "BotonAgregar" 
           onClick = {() =>{
             props.add(counter);
-            setShow(show);
+            setShow(!show);
           }}
           >Agregar al carrito
         </button>
       </div>
       ):(
-      <button><Link  to="/carrito">Ir al carrito</Link></button>
+      <button><Link to="/carritoList">Ir al carrito</Link></button>
       )}
       
   </div>

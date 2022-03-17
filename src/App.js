@@ -6,7 +6,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailCont
 import Footer from './components/Footer/Footer';
 import Categorias from './components/Categorias/categorias';
 import Carrito from './components/carrito/Carrito';
-import {ItemsProvider} from './components/CartContext/CartContext'
+import {ItemsProvider} from './components/CartContext/CartContext';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
               <Route path = "/DetalleDeProducto" element={<ItemDetailContainer />} />
               <Route path = "/DetalleDeProducto/:id" element={<ItemDetailContainer />} />
               <Route path = "/categoria/:categoria" element={<Categorias />} />
-              <Route path = "/carrito" element={<Carrito />} />
+              <Route path = "/carritoList" element={<Carrito />} />
           </Routes>
           <Footer/>
         </Router>

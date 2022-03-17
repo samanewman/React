@@ -1,26 +1,40 @@
 import Item from '../Item/Item';
 import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import {CartContext} from '../CartContext/CartContext'
 
 
 const ItemDetail = ({itemd}) => {
 
 
-    const addItem = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
+
+    const [size, setSize] = useState(itemd.itemSize[0]);
+    const [color, setColor] = useState(itemd.itemColors[0]);
+
+    const cambiarSize = (event) => {
+            setSize(event.target.value)
+      }
+
+      const cambiarColor = (event) => {
+        setColor(event.target.value)
+  }
 
     const add = (counter) =>{   
         if (counter > 0){
-
-            let newItem = { 
+                let newItem = { 
                 id: parseInt(itemd.itemId),
                 nombre : itemd.itemName, 
-                cantidad : parseInt(counter)
+                cantidad : parseInt(counter),
+                size: `${size}`,
+                color: `${color}`,
+                precio: parseInt(itemd.itemPrice),
+                foto: itemd.pictureUrl
             }
 
             addItem(newItem);
-            alert(`Tu producto  ${newItem.nombre} se agregó  al carrito.`); 
+            alert(`Tu producto  ${newItem.nombre} de tamaño ${size}  y de color ${color} se agregó  al carrito.`); 
         }
       };  
 
@@ -45,25 +59,25 @@ return(
             <div className = "BoxListas">{itemd.itemDescription}</div>
                         <div className = "BoxListas">
                             <div>Tamaños:</div>
-                            <ul className = "ULista">
-                                <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[0]}</label></li>
-                                <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[1]}</label></li>
-                                <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[2]}</label></li>                            
-                                <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[3]}</label></li>
-                                <li className = "Li"><input type= "radio" name = "tamaños"></input><label>{itemd.itemSize[4]}</label></li>
+                            <ul className = "ULista" onChange = {cambiarSize}>
+                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[0]} checked></input>{itemd.itemSize[0]}</li>
+                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[1]}></input>{itemd.itemSize[1]}</li>
+                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[2]}></input>{itemd.itemSize[2]}</li>                            
+                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[3]}></input>{itemd.itemSize[3]}</li>
+                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[4]}></input>{itemd.itemSize[4]}</li>
                             </ul>
                         </div>
                         <div className = "BoxListas">
                             <div>Colores:</div>
-                            <ul className = "ULista">
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[0]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[1]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[2]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[3]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[4]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[5]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[6]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color"></input><label style={{color: `${itemd.itemColors[7]}`}}>■</label></li>
+                            <ul className = "ULista" onChange = {cambiarColor}>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[0]} checked></input><label style={{color: `${itemd.itemColors[0]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[1]}></input><label style={{color: `${itemd.itemColors[1]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[2]}></input><label style={{color: `${itemd.itemColors[2]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[3]}></input><label style={{color: `${itemd.itemColors[3]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[4]}></input><label style={{color: `${itemd.itemColors[4]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[5]}></input><label style={{color: `${itemd.itemColors[5]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[6]}></input><label style={{color: `${itemd.itemColors[6]}`}}>■</label></li>
+                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[7]}></input><label style={{color: `${itemd.itemColors[7]}`}}>■</label></li>
                             </ul>
                         </div>  
                         <div>
