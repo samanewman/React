@@ -5,6 +5,7 @@ import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import {useContext, useState} from 'react';
 import {CartContext} from '../CartContext/CartContext'
+import Carrito from '../carrito/Carrito'
 
 
 const ItemDetail = ({itemd}) => {
@@ -37,66 +38,72 @@ const ItemDetail = ({itemd}) => {
                 precio: parseInt(itemd.itemPrice),
                 foto: itemd.pictureUrl
             }
-
+            //Agregamos el item al carrito
             addItem(newItem);
+            //Bajamos el stock del item.
+            itemd.stock = itemd.stock - counter;
             alert(`Tu producto  ${newItem.nombre} de tamaño ${size}  y de color ${color} se agregó  al carrito.`); 
         }
       };  
 
 return(
-    
-    <div className = "BoxAllDetails">
-        
-        
-        <div>
-            <Item 
-                items = {itemd} 
-            />
-                <ItemCount 
-                    stock = {`${itemd.stock}`}
-                    initial = {`${itemd.initial}`}
-                    add = {add}/> 
-
-        </div>
-
-        <div className = "BoxDetails">
+    <div>
+        <div className = "BoxAllDetails">
+            
+            
             <div>
-            <div className = "BoxListas">{itemd.itemDescription}</div>
-                        <div className = "BoxListas">
-                            <div>Tamaños:</div>
-                            <ul className = "ULista" onChange = {cambiarSize}>
-                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[0]} checked></input>{itemd.itemSize[0]}</li>
-                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[1]}></input>{itemd.itemSize[1]}</li>
-                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[2]}></input>{itemd.itemSize[2]}</li>                            
-                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[3]}></input>{itemd.itemSize[3]}</li>
-                                <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[4]}></input>{itemd.itemSize[4]}</li>
-                            </ul>
-                        </div>
-                        <div className = "BoxListas">
-                            <div>Colores:</div>
-                            <ul className = "ULista" onChange = {cambiarColor}>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[0]} checked></input><label style={{color: `${itemd.itemColors[0]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[1]}></input><label style={{color: `${itemd.itemColors[1]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[2]}></input><label style={{color: `${itemd.itemColors[2]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[3]}></input><label style={{color: `${itemd.itemColors[3]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[4]}></input><label style={{color: `${itemd.itemColors[4]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[5]}></input><label style={{color: `${itemd.itemColors[5]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[6]}></input><label style={{color: `${itemd.itemColors[6]}`}}>■</label></li>
-                                <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[7]}></input><label style={{color: `${itemd.itemColors[7]}`}}>■</label></li>
-                            </ul>
-                        </div>  
-                        <div>
-                            <div>Tenemos cotización sin cargo para todas las formas y colores. Hacemos Factura A y B.</div>
-                            <div>✅Toda la cartelería está confeccionada en Neon LED de alta eficiencia.</div>
-                            <div>🔌 Utiliza tensión 12v. Incluye fuente de alimentación para conectar a 220v.</div> 
-                            <div>Aceptamos 💵 Efectivo, 💳 MercadoPago o ↪️ Transferencia</div>
-                            <div>📐Realizamos diseños personalizados.
-                                <div>🚚Hacemos Envíos a todo el país.</div>
-                            </div>
-                        </div> 
+                <Item 
+                    items = {itemd} 
+                />
+                    <ItemCount 
+                        stock = {`${itemd.stock}`}
+                        initial = {`${itemd.initial}`}
+                        itemId = {`${itemd.itemId}`}
+                        add = {add}/> 
             </div>
-          </div>
 
+            <div className = "BoxDetails">
+                <div>
+                <div className = "BoxListas">{itemd.itemDescription}</div>
+                            <div className = "BoxListas">
+                                <div>Tamaños:</div>
+                                <ul className = "ULista" onChange = {cambiarSize}>
+                                    <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[0]} checked></input>{itemd.itemSize[0]}</li>
+                                    <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[1]}></input>{itemd.itemSize[1]}</li>
+                                    <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[2]}></input>{itemd.itemSize[2]}</li>                            
+                                    <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[3]}></input>{itemd.itemSize[3]}</li>
+                                    <li className = "Li"><input type= "radio" name = "size" value = {itemd.itemSize[4]}></input>{itemd.itemSize[4]}</li>
+                                </ul>
+                            </div>
+                            <div className = "BoxListas">
+                                <div>Colores:</div>
+                                <ul className = "ULista" onChange = {cambiarColor}>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[0]} checked></input><label style={{color: `${itemd.itemColors[0]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[1]}></input><label style={{color: `${itemd.itemColors[1]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[2]}></input><label style={{color: `${itemd.itemColors[2]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[3]}></input><label style={{color: `${itemd.itemColors[3]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[4]}></input><label style={{color: `${itemd.itemColors[4]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[5]}></input><label style={{color: `${itemd.itemColors[5]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[6]}></input><label style={{color: `${itemd.itemColors[6]}`}}>■</label></li>
+                                    <li className = "Li"><input type= "radio" name = "color" value = {itemd.itemColors[7]}></input><label style={{color: `${itemd.itemColors[7]}`}}>■</label></li>
+                                </ul>
+                            </div>  
+                            <div>
+                                <div>Tenemos cotización sin cargo para todas las formas y colores. Hacemos Factura A y B.</div>
+                                <div>✅Toda la cartelería está confeccionada en Neon LED de alta eficiencia.</div>
+                                <div>🔌 Utiliza tensión 12v. Incluye fuente de alimentación para conectar a 220v.</div> 
+                                <div>Aceptamos 💵 Efectivo, 💳 MercadoPago o ↪️ Transferencia</div>
+                                <div>📐Realizamos diseños personalizados.
+                                    <div>🚚Hacemos Envíos a todo el país.</div>
+                                </div>
+                            </div> 
+                </div>
+            </div>
+        </div>
+        <div>
+            <Carrito 
+                itemd = {itemd}/>
+        </div>
     </div>
     
 )

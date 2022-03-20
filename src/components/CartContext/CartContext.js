@@ -35,7 +35,7 @@ export const ItemsProvider = ({children}) =>{
 
     const removeItem = (newItem) =>{
         const newitemcarrito = carrito.filter( 
-            (item) => item.id !== newItem.id
+            (item) => item.id !== newItem.id || (item.id === newItem.id && newItem.size !== item.size) || (item.id === newItem.id && newItem.color !== item.color)
         );
         setCarrito(newitemcarrito);
     }

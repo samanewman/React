@@ -1,15 +1,15 @@
 const itemsjson = [
 
     {
-       itemId:"0",
+       itemId: "0",
        pictureUrl:"https://cdn.shopify.com/s/files/1/0396/9643/3315/products/55_6db3015e-f1d7-47d9-a72d-813b55281d0b_1024x.jpg?v=1594585498",
        itemName:"Kirby",
        itemDescription:"Cartel Kirby neón led de alta eficiencia. Se puede solicitar en otros colores y distintos tamaños. Utiliza 12v se conecta a 220.",
        itemSize: ["40x20", "50x30","60x40", "70x50", "80x60"],
        itemPrice:"8000",
        itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-       stock:"10",
-       initial:"1",
+       stock: 10,
+       initial: 1,
        categoria: "pokemon"
     },
     {

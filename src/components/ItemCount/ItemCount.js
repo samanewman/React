@@ -16,7 +16,7 @@ const ItemCount = (props) => {
   const SubirCantidad = () => {
     
     if (parseInt(props.stock - 1 ) >= parseInt(counter)){
-      setCounter (parseInt(counter) + 1);      
+      setCounter (parseInt(counter) + 1); 
     }  
   };
 
