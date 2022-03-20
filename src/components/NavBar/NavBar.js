@@ -20,7 +20,6 @@ const NavBar = () => {
                         <li><Link className = "ItemNav" to="/categoria/darling-in-the-franxx">Darling in the Franxx</Link></li>
                     </ul>
                 </li>
-                <li> <Link className = "ItemNav" to="/Contacto">Contacto</Link></li>
             </ul>
             <CartWidget/>
         </nav>

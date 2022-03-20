@@ -49,6 +49,7 @@ const Carrito = ({itemd}) => {
               <div>{itemcarrito.precio}</div>
             </div>
             <button onClick = {() =>{
+              itemd.stock = itemd.stock + itemcarrito.cantidad;
               removeItem(itemcarrito);
             }}>Borrar</button>
           </div>
