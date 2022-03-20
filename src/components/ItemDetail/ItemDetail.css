@@ -27,3 +27,9 @@
     flex-wrap: wrap;
     
 }
+
+.BorrarTodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

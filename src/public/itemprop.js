@@ -20,8 +20,8 @@ const itemsjson = [
         itemSize: [ "50x20","60x30","70x40", "80x50", "90x60"],
         itemPrice:"10000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-        stock:"5",
-        initial:"1",
+        stock:5,
+        initial:1,
         categoria: "pokemon"
     },
     {
@@ -32,8 +32,8 @@ const itemsjson = [
         itemSize: ["50 x 60", "60x70", "70x80","80x70", "90x80"],
         itemPrice:"12000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-        stock:"4",
-        initial:"1",
+        stock:4,
+        initial:1,
         categoria: "pokemon"
     },
     {
@@ -44,8 +44,8 @@ const itemsjson = [
          itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
          itemPrice:"10000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-         stock:"6",
-         initial:"1",
+         stock:6,
+         initial:1,
          categoria: "sailor-moon"
      },
      {
@@ -56,8 +56,8 @@ const itemsjson = [
          itemSize:["30x30", "40x40", "50x50", "60x60", "70x70"],
          itemPrice:"9000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-         stock:"6",
-         initial:"1",
+         stock:6,
+         initial:1,
          categoria: "sailor-moon"
      },
      {
@@ -68,8 +68,8 @@ const itemsjson = [
          itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
          itemPrice:"15000",
          itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-         stock:"6",
-         initial:"1",
+         stock:6,
+         initial:1,
          categoria: "pokemon"
      },
      {
@@ -80,8 +80,8 @@ const itemsjson = [
         itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
         itemPrice:"12000",
         itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-        stock:"9",
-        initial:"1",
+        stock:9,
+        initial:1,
         categoria: "darling-in-the-franxx"
     },
     {
@@ -92,10 +92,94 @@ const itemsjson = [
        itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
        itemPrice:"12000",
        itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
-       stock:"9",
-       initial:"1",
+       stock:9,
+       initial:1,
        categoria: "naruto"
-   }
+   },
+   {
+    itemId:"8",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto3.jpg?alt=media&token=7b765665-1519-4b6f-977c-277336daf8d0",
+    itemName:"Darth Vader",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"14000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:9,
+    initial:1,
+    categoria: "star-wars"
+},
+{
+    itemId:"9",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto9.jpg?alt=media&token=33508c01-2b74-4b2c-b68d-687ae995af93",
+    itemName:"Konoha",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"14000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:4,
+    initial:1,
+    categoria: "naruto"
+},
+{
+   itemId:"10",
+   pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto8.jpg?alt=media&token=ba3174c0-c1a9-4d15-864a-8d7e566d3ba5",
+   itemName:"Rick",
+   itemDescription: "Cartel de luces de neón led de alta eficiencia",
+   itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+   itemPrice:"12000",
+   itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+   stock:9,
+   initial:1,
+   categoria: "rick-y-morty"
+},
+{
+    itemId:"11",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto16.jpg?alt=media&token=cea0003b-8c57-4351-b44c-d65e2e5f5ca0",
+    itemName:"Dai Totoro",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"12000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:3,
+    initial:1,
+    categoria: "mi-vecino-totoro"
+ },
+ {
+    itemId:"12",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto14.jpg?alt=media&token=f733cb5e-9992-46a6-b8ef-b833626b1374",
+    itemName:"Inosuke",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"12000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:8,
+    initial:1,
+    categoria: "kimetsu-no-yaiba"
+ },
+ {
+    itemId:"13",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto12.jpg?alt=media&token=de2e2bf8-0fef-4fa5-a6e9-40a7769c1fc6",
+    itemName:"Levi",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"12000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:8,
+    initial:1,
+    categoria: "shingeki-no-kyojin"
+ },
+ {
+    itemId:"14",
+    pictureUrl:"https://firebasestorage.googleapis.com/v0/b/dioneonled-4d8cf.appspot.com/o/Foto11.jpg?alt=media&token=38c93b52-7d15-4606-a4b1-0bc84e7240ce",
+    itemName:"Toru Oikawa",
+    itemDescription: "Cartel de luces de neón led de alta eficiencia",
+    itemSize: ["50x30","60x40","70x50","80x60", "90x70"],
+    itemPrice:"12000",
+    itemColors: ["blue", "red", "deeppink", "yellow", "white", "green", "lightblue", "orange"],
+    stock:9,
+    initial:1,
+    categoria: "haikyuu"
+},
  ]
  
  export default itemsjson;

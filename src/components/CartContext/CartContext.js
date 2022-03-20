@@ -9,10 +9,8 @@ export const CartContext = createContext();
 export const ItemsProvider = ({children}) =>{
     
     //Creación y state del array del carrito de compras (Acá van los productos añadidos al mismo solamente)
-    const [carrito, setCarrito] = useState ([
-        
-    ]);
-
+    const [carrito, setCarrito] = useState ([]);
+    
     //Función para añadit un producto al carrito
     const addItem = (newItem) =>{
 
@@ -45,13 +43,13 @@ export const ItemsProvider = ({children}) =>{
     const clear = (carrito) =>{
 
         carrito.length = 0;
-        const newitemcarrito = carrito;
-        setCarrito(newitemcarrito);
+        const newcarrito = carrito;
+        setCarrito(newcarrito);
     }
     
     //provider con los valores que pueden ser utilizados en los demás components.
     
-    return <CartContext.Provider value = {{ addItem, removeItem, clear, carrito, setCarrito }}>
+    return <CartContext.Provider value = {{ addItem, removeItem, clear, carrito, setCarrito}}>
         {children}
 
     </CartContext.Provider>;

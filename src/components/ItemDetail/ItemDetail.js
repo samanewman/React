@@ -5,7 +5,6 @@ import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import {useContext, useState} from 'react';
 import {CartContext} from '../CartContext/CartContext'
-import Carrito from '../carrito/Carrito'
 
 
 const ItemDetail = ({itemd}) => {
@@ -25,6 +24,7 @@ const ItemDetail = ({itemd}) => {
       const cambiarColor = (event) => {
         setColor(event.target.value)
   }
+
 
     //Exp. funcional para añadit producto al carrito. Datos del producto + llamado a la función del context
     const add = (counter) =>{   
@@ -99,10 +99,6 @@ return(
                             </div> 
                 </div>
             </div>
-        </div>
-        <div>
-            <Carrito 
-                itemd = {itemd}/>
         </div>
     </div>
     

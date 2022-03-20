@@ -7,8 +7,7 @@ import './carrito.css';
 import {useContext} from 'react';
 import {CartContext} from '../CartContext/CartContext'
 
-
-const Carrito = ({itemd}) => {
+const Carrito = () => {
 
   //Se usa el carrito que se encuentra en el context y la función de eliminar item del carrito.
   const {carrito} = useContext(CartContext);
@@ -49,14 +48,15 @@ const Carrito = ({itemd}) => {
               <div>{itemcarrito.precio}</div>
             </div>
             <button onClick = {() =>{
-              itemd.stock = itemd.stock + itemcarrito.cantidad;
               removeItem(itemcarrito);
             }}>Borrar</button>
           </div>
         ))
         }
+
+        
       </div>
-          
+
   </div>
   ) 
 
