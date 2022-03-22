@@ -23,7 +23,7 @@ const NavBar = () => {
                         <li><Link className = "ItemNav" to="/categoria/mi-vecino-totoro">Mi vecino Totoro</Link></li>
                         <li><Link className = "ItemNav" to="/categoria/kimetsu-no-yaiba">Kimetsu No Yaiba</Link></li>
                         <li><Link className = "ItemNav" to="/categoria/shingeki-no-kyojin">Shingeki No Kyojin</Link></li>
-                        <li><Link className = "ItemNav" to="/categoria/haikyuu">haikyuu</Link></li>
+                        <li><Link className = "ItemNav" to="/categoria/haikyuu">Haikyuu</Link></li>
                     </ul>
                 </li>
             </ul>

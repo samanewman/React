@@ -6,6 +6,7 @@ import ItemList from '../../components/ItemList/ItemList';
 import itemsjson from '../../public/itemprop';
 
 
+
 const ItemListContainer = (props) =>{
   
   //Este estado contiene la info del array de productos resultado de la promise.

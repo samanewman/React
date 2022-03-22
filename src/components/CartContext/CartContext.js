@@ -1,16 +1,15 @@
 //contexto con las funciones y states globales que se utilizan en los distintos components.
-
 import { createContext } from 'react/cjs/react.development';
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 //creación del contexto
 export const CartContext = createContext();
 
 export const ItemsProvider = ({children}) =>{
-    
-    //Creación y state del array del carrito de compras (Acá van los productos añadidos al mismo solamente)
+    //Creación y state del array del carrito de compras
+    // (Acá van los productos añadidos al mismo solamente)
     const [carrito, setCarrito] = useState ([]);
-    
+
     //Función para añadit un producto al carrito
     const addItem = (newItem) =>{
 

@@ -7,9 +7,9 @@ import Footer from './components/Footer/Footer';
 import Categorias from './components/Categorias/categorias';
 import Carrito from './components/carrito/Carrito';
 import {ItemsProvider} from './components/CartContext/CartContext';
-import {db} from './Firebase/FirebaseConfig';
 
 const App = () => {
+
   return (
     <ItemsProvider>
       <Router>

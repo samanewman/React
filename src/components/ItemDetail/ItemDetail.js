@@ -4,7 +4,7 @@ import Item from '../Item/Item';
 import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import {useContext, useState} from 'react';
-import {CartContext} from '../CartContext/CartContext'
+import {CartContext} from '../CartContext/CartContext';
 
 
 const ItemDetail = ({itemd}) => {
@@ -40,8 +40,6 @@ const ItemDetail = ({itemd}) => {
             }
             //Agregamos el item al carrito
             addItem(newItem);
-            //Bajamos el stock del item.
-            itemd.stock = itemd.stock - counter;
             alert(`Tu producto  ${newItem.nombre} de tamaño ${size}  y de color ${color} se agregó  al carrito.`); 
         }
       };  
@@ -55,11 +53,13 @@ return(
                 <Item 
                     items = {itemd} 
                 />
-                    <ItemCount 
+
+                <ItemCount 
                         stock = {`${itemd.stock}`}
                         initial = {`${itemd.initial}`}
                         itemId = {`${itemd.itemId}`}
-                        add = {add}/> 
+                        add = {add}
+                /> 
             </div>
 
             <div className = "BoxDetails">
@@ -100,6 +100,7 @@ return(
                 </div>
             </div>
         </div>
+        
     </div>
     
 )

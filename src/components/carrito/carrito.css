@@ -5,3 +5,10 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
+
+.BotonComprar{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
