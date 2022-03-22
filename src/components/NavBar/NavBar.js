@@ -1,4 +1,4 @@
-//Navbar con las opciones navegablesy los links del ruteo
+//Navbar con las opciones navegables y los links del ruteo
 
 import '../CartWidget/CartWidget.css';
 import './NavBar.css'

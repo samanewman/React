@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Productos from './components/Productos/Productos';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
-import Categorias from './components/Categorias/categorias';
-import Carrito from './components/carrito/Carrito';
+import Categorias from './components/Categorias/Categorias';
+import Carrito from './components/Carrito/Carrito';
 import {ItemsProvider} from './components/CartContext/CartContext';
 
 const App = () => {

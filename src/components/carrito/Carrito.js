@@ -3,7 +3,7 @@
 //Contiene un mapeo del array carrito que contiene los productos que se añaden al carrito.
 
 import React from 'react';
-import './carrito.css';
+import './Carrito.css';
 import {useContext} from 'react';
 import {CartContext} from '../CartContext/CartContext';
 
