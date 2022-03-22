@@ -1,6 +1,6 @@
 //Detalles del item, acá el llamado a la función para añadir un producto al carrito.
 
-import Item from '../item/Item';
+import Item from '../Item/Item';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import {useContext, useState} from 'react';
