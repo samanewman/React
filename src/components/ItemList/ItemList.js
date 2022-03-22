@@ -1,7 +1,7 @@
 //Mapeo de items
 
 import React from 'react';
-import Item from '../../components/Item/Item';
+import Item from '../item/item';
 import '../ItemList/ItemList.css';
 
 const ItemList = ({items}) => {
